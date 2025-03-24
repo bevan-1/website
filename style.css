@@ -892,16 +892,18 @@ input[required]::placeholder, textarea[required]::placeholder {
 .australian-made-logo{
     margin: -35px 0;
     right: 40px;
-    max-width: 120px;
+    max-width: 100%;
     max-height: 60px;
+    width: auto;
     height: auto;
 }
 
 .preferred-supplier-logo{
     margin: -39px 0;
     right: 120px;
-    max-width: 140px;
+    max-width: 100%;
     max-height: 70px;
+    width: auto;
     height: auto;
 }
 
