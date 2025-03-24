@@ -7,7 +7,7 @@
     <link rel="preload" as="image" href="img/background.webp" type="image/webp">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <meta name="description" content="Trusted anti-slip floor treatments for over 35 years. Prevent slips before they happen - fully insured, Australian-owned experts.">
+    <meta name="description" content="Trusted anti-slip floor treatments for over 35 years. Prevent slips and falls before they happen - fully insured, Australian-owned experts.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body class="home">
@@ -86,7 +86,7 @@
             <div class="about-paragraphs">
                 <div class="row">
                     <div class="col">
-                        <p><strong>Anti Slip</strong> is a proudly Australian-owned business with over 35 years of experience helping homes and businesses prevent accidents before they happen.</p>
+                        <p><strong>Anti Slip</strong> is a proudly Australian-owned company with over 35 years of experience helping homes and businesses prevent accidents before they happen.</p>
                     </div>
 
                     <div class="col">
@@ -130,16 +130,49 @@
                 <img src="img/anti-slip.webp" width="800" height="600" alt="How does it work?">
             </div>
             <div class="services-box" data-popup="pressurecleaning">
-                <div class="overlay">Pressure Cleaning</div>
+                <div class="overlay">Pressure Cleaning & Sealing</div>
                 <img src="img/pressure-cleaning.webp" width="500" height="333" alt="What is it?">
             </div>
         </div>
-    </div>
 
-    <div class="services-popup" id="services-popup">
-        <div class="services-popup-content">
-            <span class="services-close">&times;</span>
-            <div id="services-popup-body"></div>
+        <div class="services-gallery">
+            <div class="featured-image">
+                <img src="img/hero-service.webp" width="1000" height="1333" alt="Australia Zoo Anti Slip Treatment">
+            </div>
+            <div class="image-grid">
+                <img src="img/service1.webp" alt="Service 1">
+                <img src="img/service2.webp" alt="Service 2">
+                <img src="img/service3.webp" alt="Service 3">
+                <img src="img/service4.webp" alt="Service 4">
+                <img src="img/service5.webp" alt="Service 5">
+                <img src="img/service6.webp" alt="Service 6">
+                <img src="img/service7.webp" alt="Service 7">
+                <img src="img/service8.webp" alt="Service 8">
+                <img src="img/service9.webp" alt="Service 9">
+            </div>
+        </div>
+
+        <div class="services-popup" id="services-popup">
+            <div class="services-popup-content">
+                <span class="services-close">&times;</span>
+                <div id="services-popup-body"></div>
+            </div>
+        </div>
+
+        <div class="image-comparison">
+            <div class="image-container">
+                <img class="before-image" src="img/before.webp" alt="Before">
+                <img class="after-image" src="img/after.webp" alt="After">
+
+                <div class="slider-line"></div>
+                <div class="slider-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                    </svg>    
+                </div>              
+            </div>
+
+            <input type="range" class="slider" min="0" max="100" />
         </div>
     </div>
 
@@ -422,6 +455,20 @@
                 popup.style.display = "none";
                 }, 300);
             }
+        });
+        
+        // Comparison Slider
+        const slider = document.querySelector(".image-comparison .slider");
+        const beforeImage = document.querySelector(".image-comparison .before-image");
+        const sliderLine = document.querySelector(".image-comparison .slider-line");
+        const sliderIcon = document.querySelector(".image-comparison .slider-icon");
+
+        slider.addEventListener("input", (e) =>{
+            let sliderValue = e.target.value + "%";
+
+            beforeImage.style.width = sliderValue;
+            sliderLine.style.left = sliderValue;
+            sliderIcon.style.left = sliderValue;
         });
 
         // Obfuscate Email
