@@ -1052,13 +1052,12 @@ body.disclaimer .main ul li{
     color: #fff;
     text-decoration: none;
     padding: 14px 28px;
-    margin-left: 20px;
     border-radius: 8px;
     font-weight: bold;
     font-size: 18px;
     white-space: nowrap;
     position: absolute;
-    right: 20px;
+    right: 0px;
     top: 50%;
     transform: translateY(-50%);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
