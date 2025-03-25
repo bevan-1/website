@@ -28,7 +28,6 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
 
@@ -79,8 +78,6 @@
     <!-- about section -->
     <div class="section" id="about">
         <h1 class="about-heading">About Us</h1>
-
-        <img src="img/team.webp" width="528" height="700" alt="Anti Slip Team" class="about-photo">
 
         <div class="about-text">
             <div class="about-paragraphs">
@@ -275,12 +272,6 @@
         </div>
     </div>
 
-    <!-- FAQ section -->
-    <div class="section" id="faq">
-        <h1>FAQ</h1>
-        <p>Frequently Asked Questions</p>
-    </div>
-
     <!-- Last Page section -->
     <div class="section" id="last-page">
         <div class="last-page-columns">
@@ -299,7 +290,6 @@
                 <p><a href="#services">Services</a></p>
                 <p><a href="#testimonials">Testimonials</a></p>
                 <p><a href="#contact">Contact Us</a></p>
-                <p><a href="#faq">FAQ</a></p>
             </div>
         </div>
     </div>
@@ -336,11 +326,21 @@
             navMenu.classList.toggle("active");
         });
 
-        // lose menu when nav link is clicked
+        // close menu when nav link is clicked
         navMenu.querySelectorAll("a").forEach((link) => {
             link.addEventListener("click", () => {
                 navMenu.classList.remove("active");
             });
+        });
+
+        // close menu when window is clicked
+        window.addEventListener("click", function(e) {
+            const isClickInsideMenu = navMenu.contains(e.target);
+            const isClickOnToggle = mobileMenu.contains(e.target);
+
+            if (!isClickInsideMenu && !isClickOnToggle) {
+                navMenu.classList.remove("active");
+            }
         });
 
         //Quote Popup and Buttons
@@ -402,7 +402,7 @@
                 <div class="popup-section">
                     <h2>What is it?</h2>
                     <p>Anti Slip is a specially formulated liquid safety product applied by our fully trained and experienced Application Team to your cermic, terracotta and quarry tiles, granite, pavers, concrete and unsealed terrazzo. Anti Slip is also very effective on enamel baths.</p>
-                    <p>//////////We also apply slip tape to stair areas//////////</p>
+                    <div class="slip-tape"><p>* For added safety, we also apply slip tape to stairs and steps where extra traction is needed.</p></div>
                 </div>
                 <div class="popup-section">
                     <h2>How does it work?</h2>

@@ -709,6 +709,12 @@ body.popup-open{
     color: red;
 }
 
+/* slip tape */
+.slip-tape p{
+    margin-top: 10px;
+    color: #333;
+}
+
 /* #endregion */
 
 /* #region Contact Us */
@@ -958,8 +964,8 @@ body.disclaimer .main ul li{
         top: 70px;
         left: -100%;
         width: 70%;
-        max-width: 100px;
-        background-color: rgba(0, 0, 0, 0.5);
+        max-width: 120px;
+        background-color: white;
         text-align: left;
         transition: left 0.3s ease-in-out;
         z-index: 1000;
