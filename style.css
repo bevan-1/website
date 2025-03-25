@@ -19,6 +19,7 @@ html{
     padding: 10px 20px;
     box-shadow: none;
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 1)
 }
 
 .site-header.scrolled {
@@ -118,7 +119,7 @@ body.popup-open{
 .scroll-down {
     display: inline-block;
     font-size: 32px;
-    color: red;
+    color: white;
     text-decoration: none;
     animation: bounce 3s infinite;
     margin-top: 20px;
@@ -300,12 +301,13 @@ body.popup-open{
 /* #endregion */
 
 /* #region Services Section */
+
 .services-grid{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    padding: 40px 0;
+    padding: 0px 10px;
 }
 
 .services-box{
@@ -539,8 +541,9 @@ body.popup-open{
 
 /* comparison slider */
 .image-comparison{
-    max-width: 500px;
+    max-width: 300px;
     margin: 20px auto;
+    left: -273px;
     border-radius: 20px;
     overflow: hidden;
 }
