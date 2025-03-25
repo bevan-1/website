@@ -79,6 +79,28 @@ html{
 .scrolled .nav-menu ul li a {
     color: red;
 }
+
+/* Nav Scroll Fix */
+#about {
+    scroll-margin-top: 60px; /* Adjust based on your header height */
+}
+
+#services {
+    scroll-margin-top: 60px; /* Adjust based on your header height */
+}
+
+#gallery {
+    scroll-margin-top: 60px; /* Adjust based on your header height */
+}
+
+#testimonials {
+    scroll-margin-top: 60px; /* Adjust based on your header height */
+}
+
+#contact {
+    scroll-margin-top: 60px; /* Adjust based on your header height */
+}
+
 /* #endregion */
 
 /* #region Hero Page */
@@ -153,7 +175,7 @@ body.popup-open{
 
 /* #region Sections */
 .section{
-    padding: 80px 20px;
+    padding: 40px 20px;
     background-color: #f9f9f9;
     text-align: center;
 }
@@ -308,7 +330,6 @@ body.popup-open{
     gap: 20px;
     justify-content: center;
     padding: 0px 10px;
-    margin-bottom: 20px;
 }
 
 .services-box{
@@ -338,7 +359,7 @@ body.popup-open{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: red;
+    color: white;
     font-size: 1.3em;
     font-weight: bold;
     text-align: center;
@@ -1235,8 +1256,7 @@ input[required]::placeholder, textarea[required]::placeholder {
 #last-page{
     background-color: #333;
     color: white;
-    padding: 40px 20px;
-    margin: 0;
+    padding: 10px 20px;
 }
 
 .last-page-columns{
@@ -1282,7 +1302,7 @@ input[required]::placeholder, textarea[required]::placeholder {
     background-color: #222;
     color: #eee;
     text-align: center;
-    padding: 40px 20px;
+    padding: 10px 20px;
     margin-top: 0px;
     position: relative;
     max-height: 1000px;
