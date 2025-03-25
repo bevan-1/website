@@ -152,7 +152,7 @@ body.popup-open{
 
 /* #region Sections */
 .section{
-    padding: 100px 20px;
+    padding: 80px 20px;
     background-color: #f9f9f9;
     text-align: center;
 }
@@ -433,8 +433,8 @@ body.popup-open{
 
 .services-close{
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: -30px;
+    right: -30px;
     background: red;
     color: white;
     border-radius: 0 0 0 8px;
@@ -452,6 +452,17 @@ body.popup-open{
 
 .services-close:hover{
     background-color: #e00000;
+}
+
+.close-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    z-index: 11;
+    background: white;
+    padding-top: 10px;
+    border-radius: 12px 12px 0 0;
 }
 
 @keyframes fadeIn{
@@ -590,6 +601,248 @@ body.popup-open{
     border: 0;
 }
 
+/* Services Images Lightbox */
+.lightbox{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0 , 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
+}
+
+.lightbox-content{
+    position: relative;
+    max-width: 90vh;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    animation: scaleUp 0.3s ease-in-out;
+    object-fit: contain;
+}
+
+.img-wrapper{
+    position: relative;
+    display: inline-block;
+}
+
+.lightbox-close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: red;
+    color: white;
+    border-radius: 0 0 0 8px;
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 36px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    animation: scaleUp 0.3s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.lightbox.show-close .lightbox-close{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.lightbox-close:hover{
+    background-color: #e00000;
+}
+
+
+/* Pressure Cleaning */ 
+.popup-section ul{
+    padding-left: 20px;
+    margin-bottom: 20px;
+    list-style-type: disc;
+}
+
+.popup-section ul li{
+    margin-bottom: 10px;
+}
+
+.popup-section ul li p{
+    margin: 0;
+    font-size: 15.5px;
+    line-height: 1.5;
+}
+
+.popup-section ul li strong{
+    color: red;
+}
+
+.start-pressure{
+    margin-bottom: 40px;
+}
+
+.start-pressure-list{
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.start-pressure-list p{
+    color: red;
+}
+
+/* #endregion */
+
+/* #region Contact Us */
+/* Contact Section */
+.contact-flex {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    text-align: left;
+}
+  
+.contact-details {
+    flex: 1 1 300px;
+}
+
+.contact-details h2{
+    color: red;
+}
+  
+.contact-details h3 {
+    color: red;
+    margin-bottom: 5px;
+}
+  
+.contact-details p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+}
+  
+.contact-details a {
+    color: red;
+    text-decoration: none;
+}
+  
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.business-hours{
+    list-style: none;
+    padding: 0;
+    margin: 0px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.business-hours li{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.business-hours .day{
+    font-weight: 500;
+}
+
+.business-hours .hours{
+    font-weight: 400;
+    color: #555;
+}
+
+.business-hours .hours.closed{
+    color: red;
+    font-weight: bold;
+}
+
+.contact-thank-you{
+    display: none;
+    text-align: center;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 30px 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.contact-thank-you h3{
+    color: red !important;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-thank-you p{
+    font: 16px;
+    color: #333;
+}
+  
+.contact-form {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+  
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+  
+.contact-form textarea {
+    resize: none;
+}
+  
+.contact-form button {
+    background-color: red;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.contact-form button:hover {
+    background-color: #e00000;
+}
+  
+@media screen and (max-width: 768px) {
+    .contact-flex {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+  
 /* #endregion */
 
 /* #region Privacy Page */
@@ -806,6 +1059,7 @@ body.disclaimer .main ul li{
     max-width: 400px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     position: relative;
+    animation: scaleUp 0.3s ease-in-out;
 }
 
 .quote-popup-content h1{

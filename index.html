@@ -86,7 +86,7 @@
             <div class="about-paragraphs">
                 <div class="row">
                     <div class="col">
-                        <p><strong>Anti Slip</strong> is a proudly Australian-owned company with over 35 years of experience helping homes and businesses prevent accidents before they happen.</p>
+                        <p><strong>Anti Slip Floor Safety Pty Ltd</strong> is a proudly Australian-owned company with over 35 years of experience helping homes and businesses prevent accidents before they happen.</p>
                     </div>
 
                     <div class="col">
@@ -100,7 +100,7 @@
                     </div>
 
                     <div class="col">
-                        <p><strong>Anti Slip Floor Safety PTY LTD</strong> is the manufacturer as well as the applicator of the treatment. With many years of experience in sucessfully treating slippery floors, you can be assured of a high level of service and the best results in improved slip resistant safety.</p>
+                        <p><strong>Anti Slip Floor Safety Pty Ltd</strong> is the manufacturer as well as the applicator of the treatment. With many years of experience in sucessfully treating slippery floors, you can be assured of a high level of service and the best results in improved slip resistant safety.</p>
                     </div>
                 </div>
 
@@ -131,7 +131,7 @@
             </div>
             <div class="services-box" data-popup="pressurecleaning">
                 <div class="overlay">Pressure Cleaning & Sealing</div>
-                <img src="img/pressure-cleaning.webp" width="500" height="333" alt="What is it?">
+                <img src="img/pressure-cleaning.webp" width="724" height="483" alt="What is it?">
             </div>
         </div>
 
@@ -154,7 +154,9 @@
 
         <div class="services-popup" id="services-popup">
             <div class="services-popup-content">
-                <span class="services-close">&times;</span>
+                <div class="close-wrapper">
+                    <span class="services-close">&times;</span>
+                </div>
                 <div id="services-popup-body"></div>
             </div>
         </div>
@@ -226,7 +228,51 @@
     <!-- contact section -->
     <div class="section" id="contact">
         <h1>Contact Us</h1>
-        <p>Contact info...</p>
+        <p>We’re here to help. Reach out today and we’ll get back to you shortly.</p>
+      
+        <div class="contact-flex">
+            <div class="contact-details">
+                <h2>Anti Slip Floor Safety Pty Ltd</h3>
+
+                <h3>Phone</h3>
+                <p><a href="tel:0410002241">0410 002 241</a></p>
+      
+                <h3>Email</h3>
+                <p><a href="mailto:info@antislip.com.au">info@antislip.com.au</a></p>
+      
+                <h3>Address</h3>
+                <p>6 Firefly Crescent, Lawnton QLD 4501</p>
+      
+                <h3>Business Hours</h3>
+                <ul class="business-hours">
+                    <li><span class="day">Monday</span><span class="hours">7am–5pm</span></li>
+                    <li><span class="day">Tuesday</span><span class="hours">7am–5pm</span></li>
+                    <li><span class="day">Wednesday</span><span class="hours">7am–5pm</span></li>
+                    <li><span class="day">Thursday</span><span class="hours">7am–5pm</span></li>
+                    <li><span class="day">Friday</span><span class="hours">7am–5pm</span></li>
+                    <li><span class="day">Saturday</span><span class="hours">7am–12pm</span></li>
+                    <li><span class="day">Sunday</span><span class="hours closed">Closed</span></li>
+                </ul>
+            </div>
+      
+            <form id="contact-form" class="contact-form" method="POST" action="https://api.web3forms.com/submit">
+                <input type="hidden" name="access_key" value="fa609d1e-93cd-476d-902e-7eaff60ba1f9" />
+
+                <div id="contact-form-fields">
+                    <input type="text" name="subject" placeholder="Subject*" required />
+                    <input type="text" name="name" placeholder="Your Name*" required />
+                    <input type="email" name="email" placeholder="Your Email*" required />
+                    <input type="tel" name="phone" placeholder="Phone Number" />
+                    <textarea name="message" rows="5" placeholder="Your Message*" required></textarea>
+                    <button type="submit">Send Message</button>
+                </div>
+
+                <div class="contact-thank-you" id="contact-thank-you">
+                    <h3>Thank you!</h3>
+                    <p>We'll be in touch shortly.</p>
+                </div>
+            </form>
+        </div>
     </div>
 
     <!-- FAQ section -->
@@ -239,7 +285,7 @@
     <div class="section" id="last-page">
         <div class="last-page-columns">
             <div class="last-page-col">
-                <h2><a href="index.html">Anti Slip Floor Safety PTY LTD</a></h2>
+                <h2><a href="index.html">Anti Slip Floor Safety Pty Ltd</a></h2>
                 <p><strong>ABN: </strong><span class="highlight">99 118 481 324</span></p>
                 <p>6 Firefly Crescent, Lawnton QLD 4501</p>
                 <p><strong>Phone Number: </strong><a href="tel:0410002241" class="highlight">0410 002 241</a></p>
@@ -254,6 +300,16 @@
                 <p><a href="#testimonials">Testimonials</a></p>
                 <p><a href="#contact">Contact Us</a></p>
                 <p><a href="#faq">FAQ</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div id="gallery-lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <div class="img-wrapper">
+                <span class="lightbox-close">&times;</span>
+                <img id="lightbox-img" src="" alt="Expanded image">
             </div>
         </div>
     </div>
@@ -346,6 +402,7 @@
                 <div class="popup-section">
                     <h2>What is it?</h2>
                     <p>Anti Slip is a specially formulated liquid safety product applied by our fully trained and experienced Application Team to your cermic, terracotta and quarry tiles, granite, pavers, concrete and unsealed terrazzo. Anti Slip is also very effective on enamel baths.</p>
+                    <p>//////////We also apply slip tape to stair areas//////////</p>
                 </div>
                 <div class="popup-section">
                     <h2>How does it work?</h2>
@@ -392,13 +449,33 @@
                     <p>The test demonstrated a dramatic improvement in slip resistance, which met and exceeded the Australian standard.</p>
                 </div>
             `,  
-            pressurecleaning: "pressure cleaning",
-
-            what: "Anti Slip is a specially formulated liquid safety product applied by our fully trained and experienced Application Team to your ceramic, terracotta and quarry tiles, granite, pavers, concrete, and unsealed terrazzo Anti Slip is also very effective on enamel baths",
-            how: "The product reacts well with slippery surfaces, slightly changing the texture of the surface to provide you with slip resistant safety, particularly in wet areas such as kitchens, change rooms, bathrooms, showers, external patios, entry foyers and ramps.",
-            look: "Presentation is important. After your floors have undergone the Anti Slip treatment, you wil notice little to no change in appearance. The real different is in the improved slip resistance. Polished and glazed surfaces are retained.",
-            duration: "Because the Anti Slip treatment is a penetrate, not a coating, it lasts for the life of your floor surface. Good regular cleaning is all that is required to maintain the effectiveness of the treatment",
-            cost: "Rates vary with the size of the floor to be treated. We are pleased to rpovide you with no obligation free inspection and quotation. As the treatment lasts for the life of the floor surface, having your floor treated is an inexpensive way of providing dramatically improved slip resisatnt floor safety"
+            pressurecleaning: `
+                <div class="start-pressure">At Anti Slip Floor Safety, we don't just make surfaces safer - we make them cleaner, stronger, and longer-lasting too. While Anti Slip is our specialty, we also offer professional pressure cleaning and sealing services to keep your surfaces looking great and performing even better.</div>
+                <div class="popup-section">
+                    <h2>Pressure Cleaning</h2>
+                    <p>We provide high-powered pressure cleaning to restore the appearance and hygiene of your outdoor surfaces. Over time, dirt, grime, algae, and weather stains build up - especially in high traffic or moisture-prone areas. Our team removes this buildup effectively, leaving your surfaces fresh and clean.</p>
+                    <div class="start-pressure-list">
+                        <p>We pressure clean:</p>
+                    </div>
+                    <ul>
+                        <li><p><strong>Pool Surrounds</strong> - Remove slippery residue, grime, and algae.</p></li>
+                        <li><p><strong>Driveways</strong> - Wash away tyre marks, and dirt buildup.</p></li>
+                        <li><p><strong>Pergola & Patio Areas</strong> - Wash away dirt buildup.</p></li>
+                        <li><p><strong>Retaining Walls</strong> - Restore a clean finish to mossy and weather-worn surfaces.</p></li>
+                    </ul>
+                </div>
+                <div class="popup-section">
+                    <h2>Surface Sealing</h2>
+                    <p>After cleaning, sealing your surfaces is the best way to protect them long-term. Our sealing service helps prevent future staining, fading, and water damage - while enhancing the look of the surface.</p>
+                    <div class="start-pressure-list">
+                        <p>We offer surface sealing for:</p>
+                    </div>
+                    <ul>
+                        <li><p><strong>Around Pools</strong> - Protect against weather penetration, and enhance appearance.</p></li>
+                        <li><p><strong>Driveways</strong> - Shield from oil, weather damage, and wear.</p></li>
+                    </ul>
+                </div>
+            `,
         };
 
         const servicesBoxes = document.querySelectorAll(".services-box");
@@ -418,11 +495,6 @@
                 const headings = {
                     antislip: "Anti Slip Treatment",
                     pressurecleaning: "Pressure Cleaning & Sealing",
-                    what: "What is it?",
-                    how: "How does it work?",
-                    look: "How will it look after treatment",
-                    duration: "How long will it last?",
-                    cost: "What will it cost"
                 };
 
                 popupBody.innerHTML = `
@@ -478,12 +550,77 @@
         const email = user + "@" + domain;
 
         document.getElementById("email-display").innerHTML = `<a href="mailto:${email}" class="highlight">${email}</a>`;
+
+        // Lightbox Elements
+        const lightbox = document.getElementById("gallery-lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const lightboxClose = document.querySelector(".lightbox-close");
+
+        const allGalleryImgs = document.querySelectorAll(".image-grid img, .featured-image img");
+
+        // Open lightbox on image click
+        allGalleryImgs.forEach(img => {
+            img.addEventListener("click", () => {
+            lightboxImg.src = img.src;
+            lightbox.style.display = "flex";
+            document.body.classList.add("popup-open");
+            setTimeout(() => {
+                lightbox.classList.add("show-close");
+            }, 250);
+            });
+        });
+
+        // Close on clicking the close button
+        lightboxClose.addEventListener("click", () => {
+            lightbox.style.display = "none";
+            document.body.classList.remove("popup-open");
+            lightbox.classList.remove("show-close");
+        });
+
+        // Close when clicking outside the image
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) {
+            lightbox.style.display = "none";
+            document.body.classList.remove("popup-open");
+            lightbox.classList.remove("show-close");
+            }
+        });
+
+        // Contact Form Submission
+        const contactForm = document.getElementById("contact-form");
+        const contactFields = document.getElementById("contact-form-fields");
+        const contactThanks = document.getElementById("contact-thank-you");
+
+        // Hide thank you message
+        contactThanks.style.display = "none";
+
+        contactForm.addEventListener("submit", async function(e) {
+            e.preventDefault();
+
+            contactForm.querySelector("button[type='submit']").disabled = true;
+
+            const formData = new FormData(contactForm);
+
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            if (response.ok) {
+                contactFields.style.display = "none";
+                contactThanks.style.display = "block";
+                contactForm.reset();
+            } else {
+                alert("Something went wrong. Please try again.");
+                contactForm.querySelector("button[type='submit']").disabled = false;
+            }
+        });
     </script>
 
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-text">
-                <p>&copy; 2025 Anti Slip. All Rights Reserved.</p>
+                <p>&copy; 2025 Anti Slip Floor Safety Pty Ltd. All Rights Reserved.</p>
                 <p>
                     <a href="disclaimer.html">Disclaimer</a> |
                     <a href="privacy.html">Privacy Policy</a>
