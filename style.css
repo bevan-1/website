@@ -308,6 +308,7 @@ body.popup-open{
     gap: 20px;
     justify-content: center;
     padding: 0px 10px;
+    margin-bottom: 20px;
 }
 
 .services-box{
@@ -542,8 +543,7 @@ body.popup-open{
 /* comparison slider */
 .image-comparison{
     max-width: 300px;
-    margin: 20px auto;
-    left: -273px;
+    margin: 0 1px;
     border-radius: 20px;
     overflow: hidden;
 }
