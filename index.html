@@ -70,7 +70,7 @@
 
     <div class="main" id="hero">
         <div class="hero-content">
-            <h1 class="hero-text">Prevent Slips Before They Happen</h1>
+            <h1 class="hero-text">Prevent Slips And Falls Before They Happen</h1>
         <p class="hero-subtext">Our Anti Slip safety treatment will dramatically improve slip resistance of floor surfaces in wet conditions... when most accidents happen! Why risk a fall when you can easily and economically eliminate the problem..</p>
         <a href="#services" class="scroll-down">See our Services</a>
         </div>
@@ -506,11 +506,14 @@
         servicesBoxes.forEach(box => {
             box.addEventListener("click", () => {
                 const key = box.getAttribute("data-popup");
-
+                
                 popup.style.display = "flex";
                 popup.classList.remove("closing");
                 popup.classList.add("active");
                 document.body.classList.add("popup-open")
+
+                const popupContent = document.querySelector(".services-popup-content");
+                popupContent.scrollTop = 0;
 
                 const headings = {
                     antislip: "Anti Slip Treatment",
