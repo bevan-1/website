@@ -916,6 +916,10 @@ body.privacy .main ul{
 body.privacy .main ul li{
     margin-bottom: 10px;
 }
+
+body.privacy .main a{
+    color: red;
+}
 /* #endregion */
 
 /* #region Disclaimer Page */
@@ -948,6 +952,10 @@ body.disclaimer .main ul{
 
 body.disclaimer .main ul li{
     margin-bottom: 10px;
+}
+
+body.disclaimer .main a{
+    color: red;
 }
 /* #endregion */
 
